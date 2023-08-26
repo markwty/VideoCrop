@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="VideoCropFrame">
+		<size>715,400</size>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxButton" name="ID_CHOOSEBTN" variable="ChooseBtn" member="yes">
+			<label>Choose video</label>
+			<pos>624,0</pos>
+			<size>90,30</size>
+			<handler function="OnChooseBtnClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxPanel" name="ID_MEDIAPANEL" variable="MediaPanel" member="yes">
+			<pos>0,0</pos>
+			<size>624,352</size>
+			<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+		</object>
+		<object class="wxRadioBox" name="ID_ASPECTRATIORADIOBOX" variable="AspectRatioRadioBox" member="yes">
+			<label>Aspect ratio</label>
+			<content>
+				<item>4:3</item>
+				<item>16:9</item>
+			</content>
+			<default>1</default>
+			<pos>632,40</pos>
+			<handler function="OnAspectRatioRadioBoxSelect" entry="EVT_RADIOBOX" />
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="no">
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxFileDialog" variable="ChooseFileDialog" member="yes">
+			<message>Select file</message>
+		</object>
+	</object>
+</wxsmith>
